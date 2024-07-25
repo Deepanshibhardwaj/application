@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Notice Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="announcement-section">
+    <h1 id="announcement" class="headline">Each morning we are born again. What we do today is what matters most.</h1>
+    <button id="editButton" class="btn">&#9998;</button>
+  </div>
+
+  <div class="container">
+    <div class="googleSlideWidget">
+      <iframe
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSae3-T71HgbohmbhNp7faC1NMq1VFnK_D6q-RAVtBQekgW3hBKLUOT-C9YfONaGgHcAnzN8hiND0Lh/embed?start=false&loop=false&delayms=3000"
+        width="100%" height="300" frameborder="0" scrolling="no" allowfullscreen="true"
+        sandbox="allow-scripts allow-same-origin" name="google-slide-iframe"></iframe>
+    </div>
+
+    <div id="container" class="widget">
+      <p id="work" class="label">Focus:</p>
+      <div id="work-timer" class="timer">
+        <p id="w_minutes">25</p>
+        <p class="semicolon">:</p>
+        <p id="w_seconds">00</p>
+      </div>
+
+      <p id="break" class="label"><button id="takeShortBreak" class="btnSBreak pomodoroBtn">Short Break</button></p>
+      <p id="cycles" class="label">Break:</p>
+
+      <div id="break-timer" class="timer">
+        <p id="b_minutes">05</p>
+        <p class="semicolon">:</p>
+        <p id="b_seconds">00</p>
+      </div>
+
+      <!-- Control Buttons -->
+      <button id="start" class="btnStart pomodoroBtn">Start</button>
+      <button id="stop" class="btnPause pomodoroBtn">Pause</button>
+      <button id="reset" class="btnReset pomodoroBtn">Reset</button>
+    </div>
+
+    <!-- Notes Section -->
+    <div class="notes-section">
+      <h2>Today I Learnt</h2>
+      <textarea id="noteInput" placeholder="Write your notes here..."></textarea>
+      <button id="saveNote" class="btn">Save</button>
+      <ul id="noteList"></ul>
+    </div>
+    <!-- Poll Section -->
+<div id="poll-section" class="poll-section">
+  <h2>Admin Poll</h2>
+  <p>Question: What is your favorite programming language?</p>
+  
+  <form id="poll-form">
+    
+    <input type="radio" id="option2" name="poll" value="Python">
+    <label for="option2">Python</label><br>
+    
+    <input type="radio" id="option3" name="poll" value="Java">
+    <label for="option3">Java</label><br>
+    
+    <input type="radio" id="option4" name="poll" value="C++">
+    <label for="option4">C++</label><br>
+    
+    <button type="submit" id="submit-poll" class="btnSubmit">Submit</button>
+  </form>
+  
+  <div id="poll-results" class="poll-results">
+    <!-- Poll results will be displayed here -->
+  </div>
+</div>
+
+
+  <div class="chatgpt-section">
+    <h2>Chat with ChatGPT</h2>
+    <div id="chatbox">
+      <div id="messages"></div>
+      <textarea id="input" placeholder="Type your message..."></textarea>
+      <button id="send">Send</button>
+    </div>
+  </div>
+
+
+
+
+
+
+    <!-- Music section -->
+    <div id="music">
+      <li>
+        <!-- Spotify Embed Code -->
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </li>
+    </div>
+  </div>
+
+  <!-- Link to the new JavaScript file -->
+  <script src="pomodoro.js"></script>
+  <script src="notes.js"></script>
+  <script src="poll.js"></script>
+
+</body>
+
+</html>

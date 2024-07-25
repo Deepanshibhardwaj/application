@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('photo8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+/* Announcement Section */
+.announcement-section {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #a9542a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announcement-section .headline {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.announcement-section .btn {
+  padding: 7px 14px;
+  background-color: #a9542a;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.announcement-section .btn:hover {
+  background-color: #8a3b1b;
+}
+
+/* Animation for announcement */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#announcement {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+
+/* Timer container */
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 80px; /* Adjusted margin for better alignment */
+  gap: 20px;
+}
+
+.googleSlideWidget {
+  width: 100%;
+  max-width: 600px;
+}
+
+.widget {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid #4a90e2;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Timer Grid */
+#container {
+  background-color: #333;
+  margin: 70px auto;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjusted for 3 columns */
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Timer Labels and Display */
+.label {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a90e2; /* Single color for timers */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #4a90e2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.timer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Buttons */
+.pomodoroBtn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.3s, color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #4a90e2;
+  background: linear-gradient(to right, #a9542a, #3b5f5c);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pomodoroBtn:hover {
+  background: linear-gradient(to right, #3b5f5c, #a9542a);
+  color: black;
+}
+/* Notes Section */
+.notes-section {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.notes-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#noteInput {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#saveNote {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.3s, color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #4a90e2;
+  background: linear-gradient(to right, #a9542a, #3b5f5c);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#saveNote:hover {
+  background: linear-gradient(to right, #3b5f5c, #a9542a);
+  color: black;
+}
+
+#noteList {
+  list-style: none;
+  padding: 0;
+}
+
+#noteList li {
+  background: rgba(0, 0, 0, 0.4);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#noteList button {
+  background: #a9542a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+#noteList button:hover {
+  background: #8a3b1b;
+}
+/* Poll Section */
+.poll-section {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.poll-section h2 {
+  margin-top: 0;
+}
+
+.poll-section label {
+  margin-right: 15px;
+}
+
+.btnSubmit {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #4a90e2;
+  background: linear-gradient(to right, #a9542a, #3b5f5c);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btnSubmit:hover {
+  background: linear-gradient(to right, #3b5f5c, #a9542a);
+  color: black;
+}
+.chatgpt-section {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#chatbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: scroll;
+  background: #333;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+
+
+
+/* Music Section */
+#music {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 20px;
+}
+
+#music iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/* Floating Emoji */
+.emoji-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  transition: transform 2s ease-in-out;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.emoji-button {
+  font-size: 1.5rem;
+  margin: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
